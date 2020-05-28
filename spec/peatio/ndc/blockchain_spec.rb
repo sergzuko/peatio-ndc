@@ -159,14 +159,14 @@ RSpec.describe Peatio::Ndc::Blockchain do
         address = "mi1mQjHnuitrHuyxY8SSadApAAB7E6yktx"
         result = blockchain.load_balance_of_address!(address, :ndc)
         expect(result).to be_a(BigDecimal)
-        expect(result).to eq("450.00".to_d)
+        expect(result).to eq("0.1e2".to_d)
       end
 
       it "requests rpc listaddressgroupings and finds address with zero balance" do
-        address = "mkPHLsZe388pWG76uT4v614jru829siHaX"
+        address = "mifMu94mMhrtaneCtsh1LCN9o5Pv97DrHN"
         result = blockchain.load_balance_of_address!(address, :ndc)
         expect(result).to be_a(BigDecimal)
-        expect(result).to eq("0".to_d)
+        expect(result).to eq("0.00".to_d)
       end
     end
 
@@ -196,4 +196,4 @@ RSpec.describe Peatio::Ndc::Blockchain do
     end
   end
 end
-end 
+end
