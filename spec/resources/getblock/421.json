@@ -1,0 +1,29 @@
+{
+"result":
+{
+"hash" : "b8e04d045d17233af93631459f0a5f9b85022cb15261ce9dfbb31675829efda6",
+"confirmations" : 5,
+"size" : 444,
+"height" : 421,
+"version" : 6,
+"merkleroot" : "e2a04e0f658fe0b14c2c835441bfdee5ec6666e46331c216d8d0561be50c4bd1",
+"mint" : 1.34885754,
+"time" : 1590674424,
+"nonce" : 0,
+"bits" : "1e061816",
+"difficulty" : 0.00064098,
+"blocktrust" : "2a0208",
+"chaintrust" : "4a3ff8f5",
+"previousblockhash" : "000015c29cc0dc88aa2f68c5503f03ca905aac81e74309d06c6635b86275f628",
+"nextblockhash" : "00001704cb25f2db34a072354c10811ebb2e2bf1681fa17514b8aca283f80ba6",
+"flags" : "proof-of-stake stake-modifier",
+"proofhash" : "000c6bf60e0d61f9c398046d36290fd3936e116054ec500ddd4a43ea011d6363",
+"entropybit" : 0,
+"modifier" : "1d67471e2ced0bad",
+"tx" : [
+"6634890912615a281e4fa12b95a8dbbcddb013d20afb855cb1ed15d471f7aecf",
+"c3e491e6afbfb99d02bd25dc19abc12a9c9787ab0529cc5c325e431a0079bb65"
+],
+"signature" : "3045022100d3517eafffc5dd0067007d65ce1571ae54ae3cd6b6668586b475c55bd2064d6a022015256298162c43aa76ba2be60fb854fc1fbce1cec22d3695bb86ccffd4a3b00e"
+}
+}

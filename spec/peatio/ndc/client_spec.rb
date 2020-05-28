@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 RSpec.describe Peatio::Ndc::Client do
-  let(:uri) { "http://admin:admin@127.0.0.1:27798" }
+  let(:uri) { "http://admin:adminpass@127.0.0.1:27798" }
   let(:uri_without_authority) { "http://127.0.0.1:27798" }
 
   before(:all) { WebMock.disable_net_connect! }
@@ -32,7 +32,7 @@ RSpec.describe Peatio::Ndc::Client do
       end
 
       it { expect { subject.json_rpc(:getblockcount) }.not_to raise_error }
-      it { expect(subject.json_rpc(:getblockcount)).to eq(117_839) }
+      it { expect(subject.json_rpc(:getblockcount)).to eq(425) }
     end
 
     context :methodnotfound do
@@ -85,4 +85,3 @@ RSpec.describe Peatio::Ndc::Client do
     end
   end
 end
-

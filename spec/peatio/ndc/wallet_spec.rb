@@ -1,9 +1,9 @@
-Ndc# frozen_string_literal: true
+# frozen_string_literal: true
 
 RSpec.describe Peatio::Ndc::Wallet do
   let(:wallet) { Peatio::Ndc::Wallet.new }
 
-  let(:uri) { "http://admin:admin@127.0.0.1:27798" }
+  let(:uri) { "http://admin:adminpass@127.0.0.1:27798" }
   let(:uri_without_authority) { "http://127.0.0.1:27798" }
 
   let(:settings) do
@@ -66,7 +66,7 @@ RSpec.describe Peatio::Ndc::Wallet do
 
     it "request rpc and creates new address" do
       result = wallet.create_address!(uid: "UID123")
-      expect(result.symbolize_keys).to eq(address: "yiApaDUZZfLyvU2N33ysJm8MV9TsVU9K4t")
+      expect(result.symbolize_keys).to eq(address: "n2fuAtTMkt2EUtmoopzncG33RSKRwH5yvA")
     end
   end
 
@@ -97,14 +97,14 @@ RSpec.describe Peatio::Ndc::Wallet do
     end
 
     let(:transaction) do
-      Peatio::Transaction.new(amount: 49.99, to_address: "yWdXnYxGbouNoo8yMvcbZmZ3Gdp6BpySxL")
+      Peatio::Transaction.new(amount: 10.00, to_address: "mi1mQjHnuitrHuyxY8SSadApAAB7E6yktx")
     end
 
     it "requests rpc and sends transaction without subtract fees" do
       result = wallet.create_transaction!(transaction)
-      expect(result.amount).to eq(49.99)
-      expect(result.to_address).to eq("yWdXnYxGbouNoo8yMvcbZmZ3Gdp6BpySxL")
-      expect(result.hash).to eq("5809bc3d1f0c72f318a28d1dc16fa268b7ec6405c64acf1e7af8f2c483a7cafc")
+      expect(result.amount).to eq(10.00)
+      expect(result.to_address).to eq("mi1mQjHnuitrHuyxY8SSadApAAB7E6yktx")
+      expect(result.hash).to eq("7318094e842c2c31a3d9e2ee18e0794c37c4759136b901e672f0a0b6da3daa1c")
     end
   end
 
@@ -133,8 +133,7 @@ RSpec.describe Peatio::Ndc::Wallet do
     it "requests rpc with getbalance call" do
       result = wallet.load_balance!
       expect(result).to be_a(BigDecimal)
-      expect(result).to eq("391.37340000".to_d)
+      expect(result).to eq("0.57e3".to_d)
     end
   end
 end
-
